@@ -12,6 +12,87 @@ body {
   color: #fff;
 }
 
+/* Navbar */
+.navbar {
+  background-color: #1e1e1e;
+  padding: 1.2rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #5DB9EE;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.logo:hover {
+  color: #00bfff;
+  text-shadow: 0 0 10px #5DB9EE;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+  text-transform: capitalize;
+}
+
+.nav-menu li a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #5DB9EE;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: #5DB9EE;
+}
+
+.nav-menu li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-menu li a.active {
+  color: #5DB9EE;
+  font-weight: 600;
+}
+
+.nav-menu li a.active::before {
+  transform: scaleX(1);
+}
+
 /* Navigation */
 .navlist {
   display: flex;
@@ -119,7 +200,7 @@ body {
 }
 
 .content h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   color: #5DB9EE;
 }
 
@@ -293,6 +374,16 @@ button:nth-child(2):hover {
   color: #fff;
   text-decoration: underline;
 }
+/* Projects Page Container */
+.projects-container {
+  max-width: 1100px;        /* controls left/right stretch */
+  margin: 0 auto;           /* centers the whole section */
+  padding: 2rem 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
 
 /* Contact Page */
 .contact-form {
@@ -339,4 +430,115 @@ button:nth-child(2):hover {
   box-shadow: 0 0 1rem #5DB9EE;
 }
 
+/* Certifications Page */
+.certifications-section {
+  text-align: center;
+  margin-top: 50px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.certifications-section h1 {
+  font-size: 2.8rem;
+  color: #5DB9EE;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #bbb;
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+  margin-bottom: 3rem;
+}
+
+.certification-card {
+  background: #2e2e2e;
+  border: 2px solid #5DB9EE;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0.5rem transparent;
+  text-align: left;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.certification-card:hover {
+  border-color: #00bfff;
+  box-shadow: 0 0 1.5rem #5DB9EE;
+  transform: translateY(-8px);
+}
+
+.cert-header {
+  margin-bottom: 1.5rem;
+}
+
+.cert-header h3 {
+  font-size: 1.5rem;
+  color: #5DB9EE;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.cert-date {
+  display: inline-block;
+  background: #5DB9EE;
+  color: #262525;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.cert-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cert-description {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.cert-link {
+  display: inline-block;
+  color: #5DB9EE;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid #5DB9EE;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-align: center;
+  align-self: flex-start;
+}
+
+.cert-link:hover {
+  background: #5DB9EE;
+  color: #262525;
+  box-shadow: 0 0 1rem #5DB9EE;
+}
+.footer {
+  background-color: #1e1e1e;
+  color: #bbb;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
