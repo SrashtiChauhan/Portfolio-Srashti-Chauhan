@@ -156,11 +156,11 @@ body {
 .left-container {
   background: #262525;
   width: 70%;
-  padding-left: 3rem;
+  padding-left: 2rem;
 }
 
 .right-container {
-  background: linear-gradient(-45deg, #3877FF, #262525 70%);
+  background: linear-gradient(-50deg, #3877FF, #262525 60%);
   width: 30%;
 }
 
