@@ -1,0 +1,93 @@
+/* Mobile View */
+@media (max-width: 768px) {
+  /* Portfolio Layout */
+  .portfolio-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right-container {
+    order: 10;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 1rem;
+  }
+
+  .left-container {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: self-start;
+    justify-content: center;
+  }
+
+  /* Design/Image Section */
+  .design {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order:-1;
+    top:1vh;
+    margin-top:7rem;
+  }
+
+  .design .circle:nth-child(1) {
+    display: none; /* Hide the background half-circle */
+  }
+
+  .design .circle:nth-child(2) {
+    position: static;
+    transform: none;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: 100% 20%;
+    border-width: 0.5rem;
+    border-radius: 50%;
+    box-shadow:
+      0 0 0.8rem #fff,
+      inset 0 0 0.8rem #fff,
+      0 0 1.5rem #3877FF,
+      inset 0 0 1.5rem #3877FF;
+  }
+
+  /* Content Section */
+  .content {
+    margin: 0;
+    padding: 0 1rem;
+  }
+
+  .content h1 {
+    font-size: 2.2rem;
+  }
+
+  .content .intro {
+    font-size: 1.2rem;
+  }
+
+  .content .detail {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin: 1rem 0 2rem;
+  }
+
+  /* Buttons */
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .btn-container button {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+  }
+}
