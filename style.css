@@ -259,8 +259,11 @@ button:nth-child(2):hover {
 }
 
 .circle:nth-child(2) {
-  width: 30rem;
-  background-image: url("image/profile10.jpg");
+  width: 36rem;
+  height: 34rem;
+  background-position: center -1%;
+ 
+  background-image: url("image/myimage.jpeg");
   background-size: 100%;
   background-repeat: no-repeat;
   border: 1rem solid white;
@@ -541,4 +544,172 @@ button:nth-child(2):hover {
   text-align: center;
   padding: 1rem 0;
   margin-top: 2rem;
+}
+.typing-text::after {
+  content: "|";
+  animation: blink 0.7s infinite;
+  color: #5DB9EE;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ACHIEVEMENTS PAGE */
+
+.achievements-section {
+  margin-top: 7rem;
+  padding: 2rem 3rem;
+  min-height: 100vh;
+  background: #1e1e1e;
+  color: white;
+  text-align: center;
+}
+
+.achievements-title {
+  font-size: 2.8rem;
+  color: #5DB9EE;
+  margin-bottom: 1rem;
+}
+
+.achievements-subtitle {
+  color: #bbb;
+  font-size: 1.1rem;
+  margin-bottom: 4rem;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.achievement-card {
+  background: #2e2e2e;
+  border: 2px solid #5DB9EE;
+  border-radius: 18px;
+  padding: 2rem;
+  transition: 0.4s ease;
+  box-shadow: 0 0 0.5rem transparent;
+}
+
+.achievement-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 1.5rem #5DB9EE;
+  border-color: #00bfff;
+}
+
+.achievement-card img {
+  width: 220px;
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+  transition: 0.4s ease;
+}
+
+.achievement-card:hover img {
+  transform: scale(1.05);
+}
+
+.achievement-card h3 {
+  color: #5DB9EE;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.achievement-card p {
+  color: #ccc;
+  line-height: 1.7;
+  font-size: 0.98rem;
+}
+
+.achievement-tag {
+  display: inline-block;
+  margin-top: 1.2rem;
+  background: #5DB9EE;
+  color: #1e1e1e;
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+/* =========================
+   SKILLS PAGE
+========================= */
+
+.skills-page {
+  margin-top: 7rem;
+  padding: 2rem 3rem;
+  min-height: 100vh;
+  background: #1e1e1e;
+  color: white;
+}
+
+.skills-title {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #5DB9EE;
+  margin-bottom: 1rem;
+}
+
+.skills-subtitle {
+  text-align: center;
+  color: #bbb;
+  max-width: 850px;
+  margin: auto;
+  margin-bottom: 4rem;
+  line-height: 1.8rem;
+}
+
+.skills-category {
+  margin-bottom: 4rem;
+}
+
+.skills-category h2 {
+  color: #5DB9EE;
+  margin-bottom: 1.8rem;
+  font-size: 1.8rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-card {
+  background: #2e2e2e;
+  border: 2px solid #5DB9EE;
+  border-radius: 15px;
+  padding: 2rem 1rem;
+  text-align: center;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 1.5rem #5DB9EE;
+  border-color: #00bfff;
+}
+
+.skill-card i {
+  font-size: 3rem;
+  color: #5DB9EE;
+  margin-bottom: 1rem;
+  transition: 0.4s ease;
+}
+
+.skill-card:hover i {
+  transform: scale(1.15);
+  color: #00bfff;
+}
+
+.skill-card span {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 500;
 }

@@ -70,3 +70,43 @@ document.addEventListener('DOMContentLoaded', function () {
   handleFormSubmit();
   window.addEventListener("scroll", revealOnScroll);
 });
+
+const roles = [
+  "Aspiring Software Engineer",
+  "Full Stack Developer",
+  "Open Source Contributor"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+const typingElement = document.querySelector(".typing-text");
+
+function typeEffect() {
+  const currentRole = roles[roleIndex];
+
+  if (isDeleting) {
+    typingElement.textContent = currentRole.substring(0, charIndex--);
+  } else {
+    typingElement.textContent = currentRole.substring(0, charIndex++);
+  }
+
+  let typingSpeed = isDeleting ? 60 : 120;
+
+  if (!isDeleting && charIndex === currentRole.length + 1) {
+    typingSpeed = 1500;
+    isDeleting = true;
+  }
+
+  if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    roleIndex = (roleIndex + 1) % roles.length;
+  }
+
+  setTimeout(typeEffect, typingSpeed);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  typeEffect();
+});

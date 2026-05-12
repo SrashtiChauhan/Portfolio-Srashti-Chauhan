@@ -91,3 +91,83 @@
     margin: 0;
   }
 }
+
+/* ACHIEVEMENTS MOBILE */
+@media (max-width: 768px) {
+
+  .achievements-section {
+    padding: 7rem 1rem 3rem;
+  }
+
+  .achievements-title {
+    font-size: 2rem;
+  }
+
+  .achievements-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .achievement-card {
+    padding: 1.5rem;
+  }
+
+  .achievement-card img {
+    width: 180px;
+  }
+
+  .achievement-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .achievement-card p {
+    font-size: 0.95rem;
+    line-height: 1.6rem;
+  }
+}
+/* =========================
+   SKILLS MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .skills-page {
+    padding: 7rem 1rem 3rem;
+  }
+
+  .skills-title {
+    font-size: 2.2rem;
+  }
+
+  .skills-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 3rem;
+  }
+
+  .skills-category h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .skill-card {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .skill-card i {
+    font-size: 2.2rem;
+  }
+
+  .skill-card span {
+    font-size: 0.9rem;
+  }
+}
